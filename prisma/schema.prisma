@@ -1,0 +1,159 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ApplicationStage {
+  IDEA
+  PROTOTYPE
+  MVP
+  EARLY_USERS
+  REVENUE
+  SCALING
+}
+
+enum ApplicationStatus {
+  NEW
+  REVIEWING
+  SHORTLISTED
+  CONTACTED
+  MEETING
+  DUE_DILIGENCE
+  PARTNERED
+  DECLINED
+}
+
+enum ApplicationActivityType {
+  APPLICATION_RECEIVED
+  STATUS_CHANGED
+  NOTE_UPDATED
+  FOLLOW_UP_UPDATED
+  CONTACTED
+}
+
+enum PortfolioStatus {
+  IDEA
+  BUILDING
+  LIVE
+  STEALTH
+  ARCHIVED
+}
+
+enum PortfolioCategory {
+  AI
+  SOFTWARE
+  INFRASTRUCTURE
+  CYBERSECURITY
+  RD
+  CONSUMER
+}
+
+model Application {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name       String
+  email      String
+  phone      String
+  linkedin   String?
+  background String?
+
+  ventureName String
+  website     String?
+  industry    String
+  stage       ApplicationStage
+
+  problem      String
+  targetUsers  String
+  whyItMatters String?
+
+  solution        String
+  differentiation String?
+
+  technologyAreas        String[]
+  technologyRequirements String
+  existingProduct        String?
+  requiresRAndD          String?
+  rdDescription          String?
+
+  users    String?
+  revenue  String?
+  funding  String?
+  traction String?
+
+  partnershipNeeds     String
+  expectedContribution String?
+  whyPartner           String?
+
+  additionalNotes String?
+  consent         Boolean @default(false)
+
+  status          ApplicationStatus @default(NEW)
+  internalNotes   String?
+  lastContactedAt DateTime?
+  nextFollowUpAt  DateTime?
+
+  activities ApplicationActivity[]
+
+  @@index([createdAt])
+  @@index([status])
+  @@index([email])
+}
+
+model ApplicationActivity {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+
+  type        ApplicationActivityType
+  title       String
+  description String?
+
+  @@index([applicationId, createdAt])
+}
+
+model PortfolioProject {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  slug             String @unique
+  title            String
+  shortDescription String
+  description      String
+
+  category PortfolioCategory
+  status   PortfolioStatus
+
+  technologies String[]
+
+  websiteUrl String?
+  githubUrl  String?
+
+  metrics Json?
+
+  featured  Boolean @default(false)
+  sortOrder Int     @default(0)
+
+  @@index([status])
+  @@index([category])
+  @@index([featured])
+  @@index([sortOrder])
+}
+
+model AdminSession {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  createdAt DateTime  @default(now())
+  expiresAt DateTime
+  revokedAt DateTime?
+
+  @@index([expiresAt])
+  @@index([revokedAt])
+}

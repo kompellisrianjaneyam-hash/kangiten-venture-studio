@@ -1,0 +1,698 @@
+.inner-page {
+  min-height: 100vh;
+  background: var(--background);
+  overflow-x: clip;
+}
+
+/* =========================================================
+   INNER HERO
+========================================================= */
+
+.inner-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 170px 0 120px;
+  background:
+    radial-gradient(
+      circle at 75% 55%,
+      rgba(22, 119, 210, 0.16),
+      transparent 27%
+    ),
+    linear-gradient(135deg, #06172f, #0b2345);
+  color: #ffffff;
+}
+
+.inner-hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.inner-hero .page-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.inner-eyebrow {
+  margin-bottom: 35px;
+}
+
+.inner-hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(56px, 8vw, 112px);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.inner-hero h1 span {
+  color: #74d4ff;
+}
+
+.inner-hero p {
+  max-width: 650px;
+  margin: 42px 0 0;
+  color: rgba(232, 246, 255, 0.58);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   INNER SECTIONS
+========================================================= */
+
+.inner-section {
+  padding: 150px 0;
+}
+
+.inner-process {
+  border-top: 1px solid var(--line);
+}
+
+/* =========================================================
+   PROCESS / HOW IT WORKS
+========================================================= */
+
+.inner-stage {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 45px;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.inner-stage-number {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.inner-stage h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 55px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.inner-stage p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   CAPABILITIES / WHAT WE BUILD
+========================================================= */
+
+.inner-capabilities {
+  border-top: 1px solid var(--line);
+}
+
+.inner-capability {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) minmax(280px, 0.75fr) 35px;
+  align-items: center;
+  min-height: 190px;
+  gap: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+.inner-capability > span {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.inner-capability h2 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.inner-capability p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.inner-capability b {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   PORTFOLIO EMPTY STATE
+========================================================= */
+
+.portfolio-empty {
+  padding: 150px 0 180px;
+}
+
+.portfolio-empty-card {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 30px 100px rgba(11, 35, 69, 0.07);
+}
+
+.portfolio-empty-mark {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(22, 119, 210, 0.16);
+  border-radius: 50%;
+}
+
+.portfolio-empty-mark::before,
+.portfolio-empty-mark::after {
+  position: absolute;
+  inset: 28px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 50%;
+  content: "";
+}
+
+.portfolio-empty-mark::after {
+  inset: 65px;
+}
+
+.portfolio-empty-mark span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--sky);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.8);
+}
+
+.portfolio-empty-card h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.portfolio-empty-card p {
+  max-width: 580px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.dark-link {
+  color: var(--navy);
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 60px;
+}
+
+.about-grid h2 {
+  margin: 0;
+  font-size: clamp(43px, 5.5vw, 76px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.about-grid h2 span {
+  color: #98aabd;
+}
+
+.about-grid p {
+  max-width: 680px;
+  margin: 50px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   APPLY
+========================================================= */
+
+.apply-page {
+  min-height: 100vh;
+  padding: 190px 0 140px;
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(56, 189, 248, 0.09),
+      transparent 25%
+    ),
+    var(--background);
+  overflow-x: clip;
+}
+
+.apply-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  align-items: center;
+  gap: 100px;
+}
+
+.apply-layout h1 {
+  margin: 0;
+  font-size: clamp(55px, 7vw, 100px);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.apply-layout h1 span {
+  color: #7d91a9;
+}
+
+.apply-layout > div > p {
+  max-width: 600px;
+  margin: 40px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.apply-card {
+  min-width: 0;
+  padding: 45px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 35px 100px rgba(11, 35, 69, 0.08);
+}
+
+.apply-card h2 {
+  margin: 0;
+  font-size: 37px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.apply-card p {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.apply-button {
+  margin-top: 32px;
+}
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+  .inner-hero {
+    min-height: 680px;
+  }
+
+  .inner-section {
+    padding: 125px 0;
+  }
+
+  .inner-capability {
+    grid-template-columns: 65px minmax(0, 1fr) minmax(220px, 0.7fr) 30px;
+    gap: 20px;
+  }
+
+  .portfolio-empty-card {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 55px;
+    padding: 60px;
+  }
+
+  .apply-layout {
+    gap: 65px;
+  }
+
+  .apply-card {
+    padding: 38px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 800px) {
+  .inner-hero {
+    min-height: 650px;
+    padding: 160px 0 85px;
+  }
+
+  .inner-eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .inner-hero h1 {
+    max-width: 700px;
+    font-size: clamp(48px, 12vw, 72px);
+  }
+
+  .inner-hero p {
+    max-width: 600px;
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .inner-section {
+    padding: 100px 0;
+  }
+
+  /* Process */
+
+  .inner-stage {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 42px 0;
+  }
+
+  .inner-stage-number {
+    font-size: 10px;
+  }
+
+  .inner-stage h2 {
+    font-size: clamp(34px, 7vw, 48px);
+  }
+
+  /* Capabilities */
+
+  .inner-capability {
+    grid-template-columns: 50px minmax(0, 1fr) 30px;
+    gap: 12px;
+    min-height: 0;
+    padding: 35px 0;
+  }
+
+  .inner-capability p {
+    grid-column: 2 / -1;
+    max-width: 600px;
+    margin-top: 4px;
+  }
+
+  /* Portfolio */
+
+  .portfolio-empty {
+    padding: 100px 0 120px;
+  }
+
+  .portfolio-empty-card {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    padding: 45px 28px;
+  }
+
+  /* About */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-grid p {
+    margin-top: 32px;
+  }
+
+  /* Apply */
+
+  .apply-page {
+    padding: 160px 0 90px;
+  }
+
+  .apply-layout {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .apply-layout > div > p {
+    margin-top: 30px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .inner-hero {
+    min-height: 610px;
+    padding: 145px 0 70px;
+  }
+
+  .inner-hero::before {
+    background-size: 52px 52px;
+  }
+
+  .inner-eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .inner-hero h1 {
+    font-size: 48px;
+    letter-spacing: -0.065em;
+    line-height: 0.96;
+  }
+
+  .inner-hero p {
+    margin-top: 28px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .inner-section {
+    padding: 78px 0;
+  }
+
+  /* Process */
+
+  .inner-stage {
+    gap: 17px;
+    padding: 34px 0;
+  }
+
+  .inner-stage h2 {
+    font-size: 34px;
+    line-height: 1.02;
+  }
+
+  .inner-stage p {
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* Capabilities */
+
+  .inner-capability {
+    grid-template-columns: 38px minmax(0, 1fr) 24px;
+    gap: 10px;
+    padding: 30px 0;
+  }
+
+  .inner-capability > span {
+    font-size: 9px;
+  }
+
+  .inner-capability h2 {
+    font-size: 28px;
+    line-height: 1.02;
+  }
+
+  .inner-capability p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .inner-capability b {
+    font-size: 17px;
+  }
+
+  /* Portfolio */
+
+  .portfolio-empty {
+    padding: 80px 0 100px;
+  }
+
+  .portfolio-empty-card {
+    gap: 42px;
+    padding: 34px 22px;
+    border-radius: 20px;
+  }
+
+  .portfolio-empty-mark {
+    width: 160px;
+    height: 160px;
+  }
+
+  .portfolio-empty-mark::before {
+    inset: 22px;
+  }
+
+  .portfolio-empty-mark::after {
+    inset: 50px;
+  }
+
+  .portfolio-empty-card h2 {
+    font-size: 39px;
+    line-height: 1;
+  }
+
+  .portfolio-empty-card p {
+    margin-top: 22px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* About */
+
+  .about-grid {
+    gap: 25px;
+  }
+
+  .about-grid h2 {
+    font-size: clamp(40px, 11vw, 58px);
+  }
+
+  .about-grid p {
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* Apply */
+
+  .apply-page {
+    padding: 140px 0 75px;
+  }
+
+  .apply-layout {
+    gap: 42px;
+  }
+
+  .apply-layout h1 {
+    font-size: 52px;
+    line-height: 0.96;
+  }
+
+  .apply-layout > div > p {
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .apply-card {
+    padding: 30px 24px;
+    border-radius: 18px;
+  }
+
+  .apply-card h2 {
+    font-size: 30px;
+  }
+
+  .apply-card p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .apply-button {
+    margin-top: 26px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+  .inner-hero {
+    padding-top: 135px;
+  }
+
+  .inner-hero h1 {
+    font-size: 43px;
+  }
+
+  .inner-stage h2 {
+    font-size: 31px;
+  }
+
+  .inner-capability {
+    grid-template-columns: 32px minmax(0, 1fr) 20px;
+  }
+
+  .inner-capability h2 {
+    font-size: 25px;
+  }
+
+  .portfolio-empty-card {
+    padding-inline: 18px;
+  }
+
+  .portfolio-empty-card h2 {
+    font-size: 34px;
+  }
+
+  .apply-layout h1 {
+    font-size: 46px;
+  }
+
+  .apply-card {
+    padding: 26px 20px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .inner-page *,
+  .apply-page * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
