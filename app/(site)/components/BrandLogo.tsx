@@ -20,8 +20,8 @@ export default function BrandLogo({
         <Image
           src="/brand/kangiten-icon.png"
           alt="Kangiten Venture Studio"
-          width={44}
-          height={44}
+          width={1351}
+          height={1164}
           priority={priority}
           className="brand-logo-navbar-image"
         />
@@ -37,8 +37,8 @@ export default function BrandLogo({
       <Image
         src="/brand/kangiten-venture-studio.png"
         alt="Kangiten Venture Studio"
-        width={260}
-        height={72}
+        width={909}
+        height={830}
         className="brand-logo-footer-image"
       />
     </span>

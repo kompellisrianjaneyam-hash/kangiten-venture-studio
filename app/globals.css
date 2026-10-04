@@ -2487,11 +2487,11 @@ a {
 }
 
 /* =========================================================
-   DESIGN OVERRIDES â€” EDITORIAL / TECHNICAL SYSTEM
+   DESIGN OVERRIDES Ã¢â‚¬â€ EDITORIAL / TECHNICAL SYSTEM
    Scoped so existing application/admin styles remain intact.
 ========================================================= */
 
-/* HOME HERO â€” keep the technical field away from the copy */
+/* HOME HERO Ã¢â‚¬â€ keep the technical field away from the copy */
 .hero {
   isolation: isolate;
 }
@@ -2547,7 +2547,7 @@ a {
 }
 
 /* =========================================================
-   WHAT WE BUILD â€” UNIQUE EDITORIAL SYSTEM
+   WHAT WE BUILD Ã¢â‚¬â€ UNIQUE EDITORIAL SYSTEM
 ========================================================= */
 
 .build-page {
@@ -4047,7 +4047,7 @@ canvas {
 }
 
 /* =========================================================
-   CURRENT WHAT WE BUILD PAGE â€” RESPONSIVE COMPATIBILITY
+   CURRENT WHAT WE BUILD PAGE Ã¢â‚¬â€ RESPONSIVE COMPATIBILITY
 ========================================================= */
 
 @media (max-width: 800px) {
@@ -4080,7 +4080,7 @@ canvas {
 }
 
 /* =========================================================
-   HERO CLEANUP â€” REMOVE DEBUG / COORDINATE LABELS
+   HERO CLEANUP Ã¢â‚¬â€ REMOVE DEBUG / COORDINATE LABELS
    The hero should contain only intentional visual information.
 ========================================================= */
 
@@ -4094,7 +4094,7 @@ canvas {
   display: none !important;
 }
 /* =========================================================
-   HOW IT WORKS â€” VENTURE SYSTEM
+   HOW IT WORKS Ã¢â‚¬â€ VENTURE SYSTEM
 ========================================================= */
 
 .how-page {
@@ -4827,7 +4827,7 @@ canvas {
   }
 }
 /* =========================================================
-   ABOUT â€” STUDIO MANIFESTO
+   ABOUT Ã¢â‚¬â€ STUDIO MANIFESTO
 ========================================================= */
 
 .about-page {
@@ -5724,7 +5724,7 @@ canvas {
     animation: none;
   }
 }/* =========================================================
-   ADMIN DASHBOARD â€” APPLICATION WORKSPACE
+   ADMIN DASHBOARD Ã¢â‚¬â€ APPLICATION WORKSPACE
 ========================================================= */
 .admin-workspace {
   min-height: 100vh;
@@ -6094,7 +6094,7 @@ canvas {
 }
 
 /* =========================================================
-   APPLICATION STEPPER â€” CONTRAST + ACTIVE STATE OVERRIDE
+   APPLICATION STEPPER Ã¢â‚¬â€ CONTRAST + ACTIVE STATE OVERRIDE
    ========================================================= */
 
 .application-progress {
@@ -6318,7 +6318,7 @@ canvas {
 
 /* =========================================================
    KANGITEN VENTURE STUDIO
-   PHASE 8.3 â€” HOMEPAGE RESPONSIVE / VISUAL OVERRIDES
+   PHASE 8.3 Ã¢â‚¬â€ HOMEPAGE RESPONSIVE / VISUAL OVERRIDES
    ========================================================= */
 
 .hero,
@@ -7001,7 +7001,7 @@ canvas {
 
 /* =========================================================
    KANGITEN VENTURE STUDIO
-   PHASE 8.4 — PROPRIETARY VISUAL SYSTEM
+   PHASE 8.4 â€” PROPRIETARY VISUAL SYSTEM
    Replace generic/stock visual language with an original
    technical venture-studio visual language.
    ========================================================= */
@@ -7725,7 +7725,7 @@ canvas {
 
 
 /* =========================================================
-   MOBILE NAVBAR — HARD LEFT / RIGHT ALIGNMENT
+   MOBILE NAVBAR â€” HARD LEFT / RIGHT ALIGNMENT
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -7776,8 +7776,10 @@ canvas {
     right: 8px !important;
   }
 }
+
+
 /* =========================================================
-   FINAL MOBILE NAVBAR LOGO POSITION
+   MOBILE NAVBAR â€” FINAL LEFT POSITION
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -7807,5 +7809,50 @@ canvas {
 
   .nav-brand {
     left: 3px !important;
+  }
+}
+
+/* =========================================================
+   BRAND LOGO â€” PRESERVE ORIGINAL ASPECT RATIO
+   ========================================================= */
+
+.brand-logo-navbar {
+  display: block !important;
+  width: 44px !important;
+  height: auto !important;
+  flex: 0 0 auto !important;
+  line-height: 0 !important;
+}
+
+.brand-logo-navbar-image {
+  display: block !important;
+  width: 44px !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
+
+.brand-logo-footer {
+  display: block !important;
+  width: 260px !important;
+  height: auto !important;
+  line-height: 0 !important;
+}
+
+.brand-logo-footer-image {
+  display: block !important;
+  width: 260px !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 640px) {
+  .brand-logo-navbar {
+    width: 44px !important;
+  }
+
+  .brand-logo-navbar-image {
+    width: 44px !important;
   }
 }
