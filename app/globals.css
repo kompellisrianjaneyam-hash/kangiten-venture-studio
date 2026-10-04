@@ -7776,3 +7776,36 @@ canvas {
     right: 8px !important;
   }
 }
+/* =========================================================
+   FINAL MOBILE NAVBAR LOGO POSITION
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .nav-shell {
+    padding-left: 4px !important;
+  }
+
+  .nav-brand {
+    left: 4px !important;
+  }
+
+  .brand-logo-navbar {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .brand-logo-navbar-image {
+    display: block !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-shell {
+    padding-left: 3px !important;
+  }
+
+  .nav-brand {
+    left: 3px !important;
+  }
+}
